@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+.circle {
+    height: 24px;
+    width: 24px;
+    border-radius: 24px;
+    background-color: black;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 99999999; /* so that it stays on top of all other elements */
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+a.invite:link {
+    color: #5865F2;
+    text-decoration: none;
+}
+a.invite:visited {
+    color: #5865F2;
+}
+a.invite:hover {
+    color: #3d56b4;
+}
+a.invite:active {
+    color: #2e44a6;
+}
+
+a.user:link {
+    color: #5865F2;
+    text-decoration: none;
+}
+a.user:visited {
+    color: #5865F2;
+}
+a.user:hover {
+    color: #3d56b4;
+}
+a.user:active {
+    color: #2e44a6;
+}
+
+.navbar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 25px 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    visibility: hidden;
+    opacity: 0;
+    animation: show-content 1.5s linear forwards;
+    animation-delay: 1.2s;
+}
+
+@keyframes show-content {
+    100% {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+.navbar .logo {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.navbar ul {
+    display: flex;
+}
+
+.navbar ul li {
+    list-style: none;
+    margin-left: 35px;
+}
+
+.navbar ul li a {
+    font-size: 20px;
+    font-weight: 500;
+    transition: .5s;
+}
+
+.navbar ul li:hover a,
+.navbar ul li.active a,
+.navbar ul .icon li.active a {
+    color: #2e559e;
+}
+
+.navbar .icon {
+    display: flex;
+    margin-left: 20px;
+}
+
+.navbar .icon li a {
+    display: inline-flex;
+    padding: 8px;
+    border: 2px solid #fff; /* Inactive icons will have a white border */
+    border-radius: 50%;
+    font-size: 20px;
+    color: #fff; /* Inactive icons will have a white color */
+    margin: 0 8px;
+    transition: .5s;
+}
+
+.navbar .icon li a:hover {
+    background: #2e559e;
+    color: #fff;
+    box-shadow: 0 0 10px #2e559e;
+}
+
+.navbar .icon li.active a {
+    color: #2e559e; /* Active icon will have the blue color */
+    border: 2px solid #2e559e; /* Active icon will have a blue border */
+}
+
+.navbar .icon li.active a:hover {
+    background: #fff; /* Active icon will have a white background on hover */
+    color: #2e559e; /* Active icon will stay blue when hovered */
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 60px 9% 0;
+    color: #fff;
+    text-align: center;
+    flex-direction: column;
+    visibility: hidden;
+    opacity: 0;
+    animation: show-content 1.5s linear forwards;
+    animation-delay: 1.2s;
+}
+
+.home-info {
+    max-width: 600px;
+    text-align: center;
+}
+
+.home-info h1 {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+.home-info p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 60px 9% 0;
+    color: #fff;
+    text-align: center;
+    flex-direction: column;
+    visibility: hidden;
+    opacity: 0;
+    animation: show-content 1.5s linear forwards;
+    animation-delay: 1.2s;
+}
+
+.about-info {
+    max-width: 600px;
+    text-align: center;
+}
+
+.about h1 {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+.about p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.support {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 60px 9% 0;
+    color: #fff;
+    text-align: center;
+    flex-direction: column;
+    visibility: hidden;
+    opacity: 0;
+    animation: show-content 1.5s linear forwards;
+    animation-delay: 1.2s;
+}
+
+.support-info {
+    max-width: 600px;
+    text-align: center;
+}
+
+.support h1 {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+.support p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.addBtn {
+    display: inline-block;
+    padding: 10px 30px;
+    background: #2e559e;
+    border: 2px solid #2e559e;
+    border-radius: 40px;
+    box-shadow: 0 0 10px #2e559e;
+    font-size: 16px;
+    color: #1f242d;
+    font-weight: 600;
+    transition: .5s;
+}
+
+.addBtn:hover {
+    background: transparent;
+    color: #2e559e;
+    box-shadow: none;
+    transition: .5s;
+}
+
+.bars-animation {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    z-index: -1;
+}
+
+.bars-animation .bar {
+    width: 100%;
+    height: 100%;
+    background: #1f242d;
+    transform: translateY(-100%);
+    animation: show-bars .5s ease-in-out forwards;
+    animation-delay: calc(.1s * var(--i));
+}
+
+@keyframes show-bars {
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+.about {
+    padding: 60px 9%;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 36px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.keyFeatures {
+    font-size: 16px;
+    color: #ddd;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+}
